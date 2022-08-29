@@ -1,0 +1,26 @@
+{
+  "videos":[{
+      "_id": "d34cfsdfsdsdf",
+      "url": "https://s3.amozws.com/videoraro",
+      "name": "Entrevista1",
+      "candidateId": 3
+  }],
+  "questions":[
+    {
+      "_id": "1132sdaasdsadsfdfsdasd",
+      "text": "Cual fue tu primera experiencia laboral"
+    },
+    {
+      "_id": "1132sdasfdfasdsd",
+      "text": "Que tecnologias usaste"
+    },
+    {
+      "_id": "1132sdasfdasdasfsd",
+      "text": "Sabes sobre patrones de diseño"
+    },
+    {
+      "_id": "1132sdasfdasdasfsasdasdd",
+      "text": "Que es cognitive refactoring"
+    }
+  ]
+}
