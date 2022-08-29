@@ -24,10 +24,9 @@ const VideoFrame = ({text}) => {
       .toArray()
   );
   
-  console.log(videos)
-
   const _handleRecord = useCallback(() =>{
     setIsRecording(true)
+
     videoRecordedRef.current = new MediaRecorder(videoRef.current.stream, {
       mimeType: "video/webm"
     });
@@ -41,7 +40,6 @@ const VideoFrame = ({text}) => {
   }, [videoRef, setIsRecording, videoRecordedRef])
 
   const handleDataAvailable = useCallback(async ({ data }) => {
-    console.log(data)
       if (data.size > 0) 
           await indexdb.videos.add({id: videoIdRef.current, chunk: data})
     }, [])
@@ -60,7 +58,6 @@ const VideoFrame = ({text}) => {
         controls
         src={URL.createObjectURL(videos[0]?.chunk)}
       />}
-
       {
         !Boolean(videos && videos?.length) &&
         <Webcam
